@@ -17,7 +17,7 @@ except:
     st.stop()
 
 # The Input
-user_chat = st.text_area("Paste your chat history / text log here:", height=300, placeholder="He: hey\nMe: hey what's up\nHe: u up?...")
+user_chat = st.text_area("Paste your chat history / text log here:", height=300, max_chars=15000, placeholder="He: hey\nMe: hey what's up\nHe: u up?...")
 
 # The "Auditor" Prompt (Optimized for DeepSeek R1)
 auditor_prompt = """
