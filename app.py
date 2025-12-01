@@ -49,7 +49,7 @@ if st.button("🚨 Audit My Relationship"):
         with st.spinner("Crunching the numbers... Analyzing Leverage..."):
             try:
                 response = client.chat.completions.create(
-                    model="gpt-3.5-turbo", # Keeping it cheap for you
+                    model="deepseek-reasoner", # This is the R1 model that "thinks" # Keeping it cheap for you
                     messages=[
                         {"role": "system", "content": auditor_prompt},
                         {"role": "user", "content": user_chat}
