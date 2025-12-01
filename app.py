@@ -8,10 +8,8 @@ st.set_page_config(page_title="The Auditor", page_icon="💔")
 st.title("💔 The Relationship Auditor")
 st.caption("Powered by IIM-Grade Logic & Heartless Algorithms")
 
-# Sidebar for the API Key (Safety First)
-with st.sidebar:
-    st.markdown("### 🔑 Unlocking the Auditor")
-    api_key = st.text_input("Enter OpenAI API Key", type="password")
+# Load Key from Secrets (Invisible to user)
+api_key = st.secrets["DEEPSEEK_API_KEY"]
     st.markdown("[Get an API key here](https://platform.openai.com/account/api-keys)")
     st.warning("Cost: ~$0.01 per audit. Cheap.")
 
