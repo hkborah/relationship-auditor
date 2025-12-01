@@ -41,7 +41,10 @@ if st.button("🚨 Audit My Relationship"):
     elif not user_chat:
         st.error("Paste the chat. I can't audit a blank page.")
     else:
-        client = OpenAI(api_key=api_key)
+        client = OpenAI(
+    api_key=api_key, 
+    base_url="https://api.deepseek.com"  # <--- This points it to DeepSeek's server
+)
         
         with st.spinner("Crunching the numbers... Analyzing Leverage..."):
             try:
